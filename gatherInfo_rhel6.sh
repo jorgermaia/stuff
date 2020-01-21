@@ -1,6 +1,6 @@
 #!/bin/bash +x
  
-out_file_path=/home/centos/sysinfo.out
+out_file_path=$PWD/sysinfo.out
  
 echo -e "**************************************************************************************************" >> $out_file_path
 echo -e "******************************************* SYSTEM INFO ******************************************" >> $out_file_path
