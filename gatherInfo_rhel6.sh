@@ -61,7 +61,7 @@ validate=`rpm -qa | grep httpd`
 if [ $? -eq 0 ]; then
 httpd -v >> $out_file_path
 else
-echo "httpd is not installed"
+echo "httpd is not installed" >> $out_file_path
 fi
 
 echo -e "\n\n========================================= JAVA ===============================================\n" >> $out_file_path
@@ -71,7 +71,7 @@ if [ $? -eq 0 ]
 then
 echo $validateJava >> $out_file_path
 else
-echo "java is not installed"
+echo "java is not installed" >> $out_file_path
 fi
 
 echo -e "\n\n========================================= CRONTAB ============================================\n" >> $out_file_path
