@@ -30,7 +30,10 @@ ifconfig >> $out_file_path
  
 echo -e "\n\n====================================== ROUTE TABLE INFO ======================================\n" >> $out_file_path
 route -n >> $out_file_path
- 
+
+echo -e "\n\n========================================= HOSTS ============================================\n" >> $out_file_path
+cat /etc/hosts >> $out_file_path
+
 echo -e "\n\n====================================== MOUNT POINT INFO ======================================\n" >> $out_file_path
 cat /etc/fstab|grep -v "#" >> $out_file_path
  
