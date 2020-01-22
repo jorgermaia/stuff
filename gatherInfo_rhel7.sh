@@ -27,7 +27,10 @@ echo -e "\tSwap Memory Info:\t"`free -mht| awk '/Swap/{print " \t\tTotal: " $2 "
  
 echo -e "\n\n========================================== IP INFO ===========================================\n" >> $out_file_path
 ifconfig >> $out_file_path
- 
+
+echo -e "\n\n========================================= HOSTS ============================================\n" >> $out_file_path
+cat /etc/hosts >> $out_file_path
+
 echo -e "\n\n====================================== ROUTE TABLE INFO ======================================\n" >> $out_file_path
 route -n >> $out_file_path
  
