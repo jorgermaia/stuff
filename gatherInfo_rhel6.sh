@@ -22,8 +22,8 @@ echo -e "\tCPU Processor Speed:\t"`awk -F':' '/^cpu MHz/ { print $2 }' /proc/cpu
 echo -e "\tCPU Cache Size:\t"`awk -F':' '/^cache size/ { print $2 }' /proc/cpuinfo`  >> $out_file_path
  
 echo -e "\n\n========================================== RAM INFO ==========================================\n" >> $out_file_path
-echo -e "\tMemory(RAM) Info:\t"`free -mht| awk '/Mem/{print " \tTotal: " $2 "\tUsed: " $3 "\tFree: " $4}'`  >> $out_file_path
-echo -e "\tSwap Memory Info:\t"`free -mht| awk '/Swap/{print " \t\tTotal: " $2 "\tUsed: " $3 "\tFree: " $4}'` >> $out_file_path
+echo -e "\tMemory(RAM) Info:\t"`free -t| awk '/Mem/{print " \tTotal: " $2 "\tUsed: " $3 "\tFree: " $4}'`  >> $out_file_path
+echo -e "\tSwap Memory Info:\t"`free -t| awk '/Swap/{print " \t\tTotal: " $2 "\tUsed: " $3 "\tFree: " $4}'` >> $out_file_path
  
 echo -e "\n\n========================================== IP INFO ===========================================\n" >> $out_file_path
 ifconfig >> $out_file_path
